@@ -30,30 +30,43 @@
 	<modules>
 		<module>api</module>
 		<module>omod</module>
+        <module>distro</module>
 	</modules>
 	
 	<properties>
-		<openMRSVersion>1.9.7</openMRSVersion>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <openMRSVersion>1.9.9</openMRSVersion>
+        <addresshierarchyVersion>2.7</addresshierarchyVersion>
+        <appframeworkVersion>2.3</appframeworkVersion>
+        <bacteriologyVersion>1.0-SNAPSHOT</bacteriologyVersion>
+        <bahmnicoreVersion>0.78-SNAPSHOT</bahmnicoreVersion>
+        <bedmanagementVersion>5.5-SNAPSHOT</bedmanagementVersion>
+        <calculationVersion>1.1</calculationVersion>
+        <emrapiVersion>1.13-SNAPSHOT</emrapiVersion>
+        <eventVersion>2.2.1</eventVersion>
+        <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
+        <idgenVersion>4.0</idgenVersion>
+        <idgenwebservicesVersion>1.1-SNAPSHOT</idgenwebservicesVersion>
+        <metadatamappingVersion>1.0.2</metadatamappingVersion>
+        <metadatasharingVersion>1.1.9</metadatasharingVersion>
+        <openelisatomfeedclientVersion>0.78-SNAPSHOT</openelisatomfeedclientVersion>
+        <openmrsatomfeedVersion>2.5.0</openmrsatomfeedVersion>
+        <providermanagementVersion>2.3</providermanagementVersion>
+        <referencedataVersion>0.78-SNAPSHOT</referencedataVersion>
+        <reportingVersion>0.9.6</reportingVersion>
+        <serializationVersion>0.2.7</serializationVersion>
+        <uicommonsVersion>1.7</uicommonsVersion>
+        <uiframeworkVersion>3.4</uiframeworkVersion>
+        <uilibraryVersion>2.0.4</uilibraryVersion>
+        <webservicesRestVersion>2.13</webservicesRestVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <MODULE_ID>${project.parent.artifactId}</MODULE_ID>
+        <MODULE_NAME>PIH Sierra Leone</MODULE_NAME>
+        <MODULE_VERSION>${project.parent.version}</MODULE_VERSION>
+        <MODULE_PACKAGE>${project.parent.groupId}.${project.parent.artifactId}</MODULE_PACKAGE>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-		
-			<!--
-			Libraries to add as dependencies with compile or runtime scope:
-			Find matching dependencies in the maven central repository.
-			<dependency>
-				<groupId>org.other.library</groupId>
-				<artifactId>library-name</artifactId>
-				<version>library.version</version>
-				<scope>compile</scope>
-			</dependency>
-			-->
-			
-			
-
-			<!-- Begin OpenMRS core -->
 			
 			<dependency>
 				<groupId>org.openmrs.api</groupId>
@@ -94,8 +107,6 @@
 				<type>pom</type>
 				<scope>test</scope>
 			</dependency>
-						
-			<!-- End OpenMRS core -->
 
 		</dependencies>
 	</dependencyManagement>
@@ -131,6 +142,14 @@
 			<name>OpenMRS Nexus Repository</name>
 			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
 		</repository>
+        <repository>
+            <id>bahmni-artifactory</id>
+            <name>bahmni-artifactory-snapshots</name>
+            <url>http://bahmnirepo.thoughtworks.com/artifactory/libs-snapshot-local</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
 	</repositories>
 
 	<pluginRepositories>
