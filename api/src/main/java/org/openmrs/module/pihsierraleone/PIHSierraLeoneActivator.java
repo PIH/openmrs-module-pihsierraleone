@@ -14,50 +14,23 @@
 package org.openmrs.module.pihsierraleone;
 
 
-import org.apache.commons.logging.Log; 
+import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.module.BaseModuleActivator;
 import org.openmrs.module.ModuleActivator;
 
 /**
  * This class contains the logic that is run every time this module is either started or stopped.
  */
-public class PIHSierraLeoneActivator implements ModuleActivator {
+public class PIHSierraLeoneActivator extends BaseModuleActivator {
 	
 	protected Log log = LogFactory.getLog(getClass());
-		
-	/**
-	 * @see ModuleActivator#willRefreshContext()
-	 */
-	public void willRefreshContext() {
-		log.info("Refreshing PIH Sierra Leone Module");
-	}
-	
-	/**
-	 * @see ModuleActivator#contextRefreshed()
-	 */
-	public void contextRefreshed() {
-		log.info("PIH Sierra Leone Module refreshed");
-	}
-	
-	/**
-	 * @see ModuleActivator#willStart()
-	 */
-	public void willStart() {
-		log.info("Starting PIH Sierra Leone Module");
-	}
-	
+
 	/**
 	 * @see ModuleActivator#started()
 	 */
 	public void started() {
 		log.info("PIH Sierra Leone Module started");
-	}
-	
-	/**
-	 * @see ModuleActivator#willStop()
-	 */
-	public void willStop() {
-		log.info("Stopping PIH Sierra Leone Module");
 	}
 	
 	/**
