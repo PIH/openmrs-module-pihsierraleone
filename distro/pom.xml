@@ -102,6 +102,12 @@
                     <scope>provided</scope>
                 </dependency>
                 <dependency>
+                    <groupId>org.bahmni.module</groupId>
+                    <artifactId>openelis-atomfeed-client-omod</artifactId>
+                    <version>${openelisatomfeedclientVersion}</version>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
                     <groupId>org.ict4h.openmrs</groupId>
                     <artifactId>openmrs-atomfeed-omod</artifactId>
                     <version>${openmrsatomfeedVersion}</version>
