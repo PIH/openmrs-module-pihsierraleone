@@ -60,6 +60,7 @@
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
         <idgenVersion>4.0</idgenVersion>
         <idgenwebservicesVersion>1.1-SNAPSHOT</idgenwebservicesVersion>
+        <metadatadeployVersion>1.7</metadatadeployVersion>
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
         <metadatasharingVersion>1.1.9</metadatasharingVersion>
         <openelisatomfeedclientVersion>0.78-SNAPSHOT</openelisatomfeedclientVersion>
@@ -80,6 +81,14 @@
 	</properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatadeploy-api</artifactId>
+            <version>${metadatadeployVersion}</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.openmrs.api</groupId>

@@ -13,6 +13,15 @@
 	<updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
 	<require_version>${openMRSVersion}</require_version>
 
+    <require_modules>
+        <require_module version="${metadatadeployVersion}">
+            org.openmrs.module.metadatadeploy
+        </require_module>
+        <require_module>
+            org.bahmni.module.bahmnicore
+        </require_module>
+    </require_modules>
+
 	<activator>${project.parent.groupId}.${project.parent.artifactId}.PIHSierraLeoneActivator</activator>
 
 	<messages>
